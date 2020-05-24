@@ -94,7 +94,7 @@ Now let's specify a background color of red for a table cell. To do that, just u
 ```
 In the case of styling elements, CSS is more effective than HTML.
 
-### Types of Elements
+### Inline and Block Elements
 ```
 In HTML, most elements are defined as block level or inline elements.
 Block level elements start from a new line.
@@ -189,5 +189,186 @@ HTML colors are expressed as hexadecimal values.
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
 As you can see, there are 16 values there, 0 through F. Zero represents the lowest value, and F represents the highest.
 
+### HTML Color Model
+Colors are displayed in combinations of ***red, green, and blue light (RGB).***
+Hex values are written using the **ashtag symbol (#)**, followed by either three or six hex characters.
+RGB color values are supported in all browsers.
+
+### Color Values
+All of the possible red, green, and blue combinations potentially number over 16 million.Here are only a few of them: **#FF0000, #00FF00, #777777**.
+We can mix the colors to form additional colors:
+**Orange and red** mix: #C1250F
+Hexadecimal color values are supported in all browsers.
+
+### Background and Font Colors
+```
+The bgcolor attribute can be used to change the web page's background color.
+
+This example would produce a dark blue background with a white headline:
+<html>
+   <head> 
+      <title>first page</title>  
+   </head>
+   <body bgcolor="#000099">
+       <h1>
+        <font color="#FFFFFF"> White headline </font>
+       </h1> 
+   </body>
+</html>
+
+The color attribute specifies the color of the text inside a <font> element.
+```
+
+### The <frame> Tag
+```
+ A page can be divided into frames using a special frame document.
+
+The <frame> tag defines one specific window (frame) within a <frameset>. Each <frame> in a <frameset> can have different attributes, such as border, scrolling, the ability to resize, etc.
+
+The <frameset> element specifies the number of columns or rows in the frameset, as well as what percentage or number of pixels of space each of them occupies.
+<frameset cols="100, 25%, *"></frameset>
+<frameset rows="100, 25%, *"></frameset>
+
+The <frameset> tag is not supported in HTML5.
+```
+
 ## 2. CSS
+### The text-transform Property
+```
+The text-transform CSS property specifies how to capitalize an element's text. For example, it can be used to make text appear with each word capitalized.
+
+The HTML:
+<p class="capitalize">
+    The value capitalize transforms the first 
+    character in each word to uppercase; 
+    all other characters remain unaffected.
+</p>
+
+The CSS:
+p.capitalize {
+   text-transform: capitalize;
+}
+```
+### text-transform Values
+```
+Using text-transform property you can make text appear in all-uppercase or all-lowercase. Here is an example:
+
+The HTML:
+<p class="uppercase">This value transforms all characters to uppercase.</p>
+<p class="lowercase">This value transforms all characters to lowercase.</p>
+
+The CSS:
+p.uppercase {
+   text-transform: uppercase;
+}
+p.lowercase {
+   text-transform: lowercase;
+}
+```
+### The letter-spacing Property
+```
+The letter-spacing property specifies the space between characters in a text. The values can be set as:
+- normal defines the default style with no extra space between characters
+- length defines an extra space between characters using measurement units like px, pt, cm, mm, etc.;
+- inherit inherits the property from its parent element;
+
+The HTML:
+<p class="normal">This paragraph has no additional letter-spacing applied.</p>
+<p class="positive ">This paragraph is letter-spaced at 4px.</p>
+
+The CSS:
+p.normal { 
+   letter-spacing: normal; 
+}
+p.positive { 
+   letter-spacing: 4px; 
+}
+
+For defining an extra space between characters, negative values are also permitted.
+Here is an example demonstrating the difference between positive and negative values:
+
+The HTML:
+<p class="positive">This paragraph is letter-spaced at 4px.</p>
+<p class="negative">This paragraph is letter-spaced at -1.5px</p>
+
+The CSS:
+p.positive { 
+   letter-spacing: 4px; 
+}
+p.negative { 
+   letter-spacing: -1.5px; 
+} 
+```
+### The word-spacing Property
+```
+The word-spacing property specifies the space between words in a text. Just like the letter-spacing property, you can set the word-spacing values as normal, length, and inherit.
+
+The HTML:
+<p class="normal">This paragraph has no additional word-spacing applied.</p>
+<p class="px">This paragraph is word-spaced at 30px.</p>
+
+The CSS:
+p.normal { 
+   word-spacing: normal;
+}
+p.px { 
+   word-spacing: 30px;
+}
+
+Measurement Units
+
+To define an extra space between words, you can use positive measurement values like px, pt, pc, cm, mm, inches, em, and ex.
+Negative values are also permitted. Here is an example to show the difference.
+
+The HTML:
+<p class="positive">This paragraph is word-spaced at 20px.</p>
+<p class="negative">This paragraph is word-spaced at -5px.</p>
+
+The CSS:
+p.positive { 
+   word-spacing: 20px;
+}
+p.negative { 
+   word-spacing: -5px;
+}
+```
+### The white-space Property
+```
+The white-space property specifies how white-space inside an element is handled. The values can be set as normal, inherit, nowrap, etc.
+
+The nowrap value makes the text continue on the same line until a <br> tag is encountered, and also collapses all sequences of whitespace into a single whitespace.
+
+The HTML:
+<p>
+This paragraph has         multiple spaces      and
+a line break, but it will be ignored, as we used the nowrap value. 
+</p>
+
+The CSS:
+p {
+   white-space: nowrap;
+}
+```
+### The CSS Box Model
+All HTML elements can be considered as boxes. The CSS box model represents the design and layout of the site. It consists of margins, borders, paddings, and the actual content.
+
+The properties work in the same order: top, right, bottom, and left.
+
+**More on Box Models**
+Every element of the webpage is a box.
+CSS uses the box model to determine how big the boxes are and how to place them.
+The box model is also used to calculate the actual width and height of the HTML elements.
+
+**Total Width of an Element**
+
+When working with boxes, it is important to understand how the total width of an element is calculated.
+For example, the total width of the box with paddings will be the sum of width plus padding left and padding right.
+![Image of Example](https://api.sololearn.com/DownloadFile?id=2999)
+
+Here is another box with margins, border, and paddings.
+The total width is the sum of left and right margins, left and right borders, left and right paddings, and the actual width of the content.
+![Image of Example](https://api.sololearn.com/DownloadFile?id=3013)
+
+When you set the width and height properties of an element with CSS, you set the width and height of the content area.
+When setting a background-color to a box, it covers the content area, as well as the padding.
 ## 3. JavaScript
