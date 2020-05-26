@@ -1207,4 +1207,310 @@ The CSS:
 ![image of example](https://api.sololearn.com/DownloadFile?id=2663)
 The z-index works only on positioned elements (position:absolute, position:relative, or position:fixed).
 
+### CSS3
+CSS3 is the latest standard for CSS.
+CSS3 is completely backwards-compatible with earlier CSS versions.
+
+Some of the most significant new features are:
+Border radius - allows us to create rounded corners for elements.
+Border images - allows us to specify an image as the border around an element.
+Multiple backgrounds - applies multiple backgrounds to elements.
+Animations and effects, and much more!
+
+To make web development easier and faster, CSS3 introduces additional new features, including the following:
+
+Box Shadow
+With the box-shadow property, you can attach one or more shadows to an element by specifying values for color, size, blur, and offset.
+
+Gradients
+CSS3 gradients allow us to set the background color of the element to a gradient. Two types of gradients are available: Linear and Radial.
+
+CSS Vendor Prefixes
+
+CSS vendor prefixes or CSS browser prefixes are a way for browser makers to add support for new CSS features during periods of testing and experimentation. Browser prefixes are used to add new features that may not be part of the final and formal CSS specification.
+
+For example, the prefix for Safari and Chrome is -webkit. The border-radius property is currently supported in Chrome, Safari, and Mozilla, as long as it is accompanied by the browser prefix.
+To specify the border-radius in Chrome and Safari, the following syntax is used:
+-webkit-border-radius: 24px;
+
+The prefix is added to the property to make it work in the unsupported browsers. So, you might end up with multiple definitions of the same property, each with the specific browser prefix.
+While most browsers today will work without prefixes, it is essential to know these for backwards capability and understanding older codes.
+
+Browser Prefixes
+Here is the list of vendor prefixes for each browser:
+![image of example](https://api.sololearn.com/DownloadFile?id=2665)
+It might feel annoying and repetitive to have to write the properties two to five times to get them to work in all browsers, but it's temporary. As browsers improve, they add support for the standards based version of the properties, and you can remove the prefixed versions.
+
+### The border-radius Property
+With CSS3, you can give any element "rounded corners" by using the border-radius property.
+```
+The CSS:
+border-radius: 20px;
+background-color: green;
+color: white;
+```
+![image](https://api.sololearn.com/DownloadFile?id=2666)
+
+```Specific border radius values can be applied for the border-radius property in the following order: top-left, top-right, bottom-right, bottom-left.
+border-radius: 0 0 20px 20px;
+
+The value of border-radius can also be specified in percentages.
+```
+![image](https://api.sololearn.com/DownloadFile?id=2667)
+
+### Creating a Circle
+
+A rectangle can be turned into a circle using only CSS.
+To create a circle, the border radius should be half of the height and the width.
+
+The rectangle in the example below has a width and height of 200px. By setting the border radius to 100px, the corners will be rounded to form a circle:
+```
+div {
+   width: 200px;
+   height: 200px;
+   border-radius: 100px;
+   background-color: green;
+   color: white;
+}
+```
+### The box-shadow Property
+
+The CSS3 box-shadow property applies shadow to elements.
+Components of the box-shadow property are decoded by browsers in the following manner:
+- **The first length for the horizontal offset will cast the shadow to the right of the box (required)**
+- **The second length is for the vertical offset that will cast the shadow to below the box (required)**
+- **The color of the shadow (optional)**
+```
+In the example below, the horizontal and vertical offsets have been set to 10px:
+div {
+   width: 300px;
+   height: 100px;
+   background-color: #9ACD32;
+   box-shadow: 10px 10px #888888;
+}
+```
+### Blur and Spread
+
+Besides color, there are also two optional values for the box-shadow element, which are blur and spread.
+The blur and spread values should be used before the color value.
+
+box-shadow: 10px 10px 5px 5px #888888;
+
+### Negative Values
+
+Negative values can also be used for the box-shadow property.
+
+horizontal offset - the shadow will be to the left of the box
+vertical offset - the shadow will be above the box
+blur radius - negative values are not allowed
+spread radius - negative values will cause the shadow to shrink
+
+For example:
+box-shadow: -10px -10px 5px -5px #888888;
+
+### Creating an Inner Shadow
+
+The "inset" keyword allows to draw an inner shadow in the box. To show an inset shadow, just add the inset keyword:
+box-shadow: inset 10px 10px 5px #888888;
+![image](https://api.sololearn.com/DownloadFile?id=2672)
+You can simultaneously create inner and outer shadows by separating each shadow with a comma.
+
+### Layering Multiple Shadows
+
+You can define as many shadows for the same box as you want by writing all of them comma-separated in the same rule.
+
+In the example below, two inner shadows have been created by separating each shadow with a comma.
+box-shadow: 
+inset 10px 10px 5px #888888, 
+inset -10px -10px 5px #888888;
+![image](https://api.sololearn.com/DownloadFile?id=2673)
+
+In case we specify more than one value, the one which comes last will be positioned at the back of all shadows.
+Here is an example:
+box-shadow: 0 0 10px 4px #FF6347, 
+0 0 10px 30px #FFDAB9, 
+30px 0 20px 30px #B0E0E6;
+![image](https://api.sololearn.com/DownloadFile?id=2674)
+As expected, the blue shadow (#B0E0E6) comes last.
+
+### Transparency Effect
+
+Before CSS3, transparent background images were used to create transparency effects. The new features of CSS3 now make it easier to create transparency effects.
+
+CSS supports color names, hexadecimal, and RGB colors.
+In addition, CSS3 introduces the following:
+
+RGBA Colors
+RGBA color values are an extension of RGB color values with an alpha channel, which specifies the opacity for a color.
+An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
+HSL (Hue, Saturation, Lightness) Colors
+An HSL color value is specified with: hsl(hue, saturation, lightness).
+Hue is a degree on the color wheel ranging from 0 to 360
+0 (or 360) is red, 120 is green, 240 is blue.
+Saturation is a percentage value: 100% is the full color.
+Lightness is also a percentage; 0% is dark (black) and 100% is white. HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color (just like RGBA).
+
+In the example below, a transparent glass menu bar is created with CSS3.
+```
+In the HTML file, a <nav> tag containing an <ul> list with links has been added:
+<nav>
+   <ul>
+       <li><a href="#">COURSES</a></li>
+       <li><a href="#">DISCUSS</a></li>
+       <li><a href="#">TOP LEARNERS</a></li>
+       <li><a href="#">BLOG</a></li>
+   </ul>
+</nav>
+```
+A number of CSS3 features are used to create the effects:
+body {
+   background:url("bg.jpg");
+}
+nav {
+   padding: 50px 0;
+   min-width: 500px; 
+}
+nav ul {
+   background: linear-gradient(90deg, 
+     rgba(255, 255, 255, 0) 0%, 
+     rgba(255, 255, 255, 0.2) 25%, 
+     rgba(255, 255, 255, 0.2) 75%, 
+     rgba(255, 255, 255, 0) 100%);
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+nav ul li {
+   display: inline-block;
+}
+nav ul li a {
+   padding: 10px; 
+   color: #FFFFFF;
+   font-size: 18px;
+   font-family: Arial;
+   text-decoration: none;
+   display: block;
+ }
+
+ ### The text-shadow Property
+
+The text-shadow property defines one or more comma-separated shadow effects, to be applied to the text content of the current element.
+
+The image below shows how the text-shadow property is applied:
+![image](https://api.sololearn.com/DownloadFile?id=2676)
+- The offset-x and offset-y values are required for the CSS text-shadow property.
+- The color value is not required, but since the default for the text-shadow is transparent, the text-shadow will not appear unless you specify a color value.
+
+### Multiple Text Shadows
+
+The text-shadow style can accept multiple values in a comma-separated list.
+According to CSS2, the shadows are laid down in the order they appear, so if they overlap, the last one that is specified should appear on top. CSS3 has now changed that so they are applied in reverse order.
+
+To create multiple shadows, the shadows are separated with a comma. Here is an example:
+h1 {
+   text-shadow: 5px 10px 2px #93968f, 
+      -3px 6px 5px #58d1e3;
+}
+To make a text shadow look realistic, remember these few shadow characteristics:
+
+- A shadow which is close to the text is normally not as blurred as a shadow that is far from the text. A shadow that is far from the text usually implies a light source which is also far from the text. 
+- A shadow which is close to the text usually implies that the underlying surface is close, that the light is close, or both. A close shadow is often darker than a distant shadow, because less light can get in between the shape and the underlying surface.
+To remove a text-shadow, set the text-shadow property to none; no shadows will be associated with that element.
+
+### Working with Pseudo-Classes
+
+The CSS pseudo-classes allow us to style elements, or parts of elements, that exist in the document tree without using JavaScript or any other scripts. A pseudo-class starts with a ":" (colon).
+The most commonly used pseudo-classes are :first-child and :last-child.
+
+The :first-child pseudo-class matches an element that is the first child element of some other element.
+In the following example, the selector matches any <p> element that is the first child of the div element:
+```
+The HTML:
+<div id="parent">
+   <p>First paragraph</p>
+   <p>Second paragraph</p>
+   <p>Third paragraph</p>
+   <p>Fourth paragraph</p>
+</div>
+```
+The CSS:
+#parent p:first-child {
+   color: green;
+   text-decoration: underline;   
+}
+
+The :last-child pseudo-class matches an element that is the last child element of some other element.
+
+In the example below, the selector will match any <p> element that is the last child of the div element:
+#parent p:last-child {
+   color: green;
+   text-decoration: underline;   
+}
+
+### Working with Pseudo Elements
+
+Pseudo elements are used to select specific parts of an element.
+There are five pseudo elements in CSS, each starting with a double colon (::):
+
+::first-line - the first line of the text in a selector
+::first-letter - the first letter of the text in a selector
+::selection - selects the portion of an element that is selected by a user
+::before - inserts some content before an element
+::after - inserts some content after an element
+
+In the example below, the ::first-line pseudo element is used to style the first line of our text:
+p::first-line {
+   color: #589432;
+}
+
+The ::selection pseudo element styles the selected text:
+p::-moz-selection {
+   background: #8bc34a;
+   color: #fff;
+}
+The -moz- prefix is used, as the ::selection element is not supported by Mozilla yet.
+
+### Working with Pseudo Elements
+
+Using ::before and ::after pseudo elements allows us to add a wide variety of content to the page.
+```
+In the example below, the ::before pseudo element is used to add an image before the list.
+The HTML:
+<p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+<p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+<p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+
+The CSS:
+p::before {
+   content: url("logo.jpg");
+}
+```
+Note the content keyword in the syntax.
+![image](https://api.sololearn.com/DownloadFile?id=2682)
+If you change the ::before element to ::after in the example above, the images will appear at the end of the list.
+
+### The word-wrap Property
+
+The word-wrap property allows long words to be broken and wrapped into the next line. It takes two values: normal and break-word.
+
+In the example below, the word-wrap property is set to normal.
+The CSS:
+p {
+   width: 210px; 
+   height: 100px;
+   border: 1px solid #000000;
+   word-wrap: normal;
+}
+![image](https://api.sololearn.com/DownloadFile?id=2683)
+
+Now let's see what happens when we use this same example and set the word-wrap property to break-word:
+p {
+   width: 210px; 
+   height: 100px;
+   border: 1px solid #000000;
+   word-wrap: break-word;
+}
+![image](https://api.sololearn.com/DownloadFile?id=2684)
+When the word-wrap property is set to break-word, the browser breaks a word when it is too long to fit within its container.
+
 ## 3. JavaScript
