@@ -1517,3 +1517,11 @@ p {
 When the word-wrap property is set to break-word, the browser breaks a word when it is too long to fit within its container.
 
 ## 3. JavaScript
+
+JavaScript is where we can change how the page **behaves**, adding interactivity. We will aim to keep as much of our JavaScript as possible in separate files.
+
+
+HTML, CSS and JS three layers form the basis of a popular approach to building web pages called progressive enhancement.
+
+How to use object and method:
+![image](/img/object&method.png)

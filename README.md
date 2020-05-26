@@ -4,4 +4,4 @@ This page contains main topics I have read and learned about front_end works.
 ## Class 102B
 1. Day 4
     - [Html and CSS](https://github.com/jasonliu5322/Reading_Learning_Notes/blob/master/102B/day4.md)
-    - JavaScript
+    - [JavaScript](https://github.com/jasonliu5322/Reading_Learning_Notes/blob/master/102B/day4.md)
