@@ -1501,6 +1501,7 @@ p {
    border: 1px solid #000000;
    word-wrap: normal;
 }
+
 ![image](https://api.sololearn.com/DownloadFile?id=2683)
 
 Now let's see what happens when we use this same example and set the word-wrap property to break-word:
@@ -1510,7 +1511,9 @@ p {
    border: 1px solid #000000;
    word-wrap: break-word;
 }
+
 ![image](https://api.sololearn.com/DownloadFile?id=2684)
+
 When the word-wrap property is set to break-word, the browser breaks a word when it is too long to fit within its container.
 
 ## 3. JavaScript
