@@ -1,11 +1,13 @@
 # Day 3
 - Chapter 3: "List" p62-73
     - Ordered lists
-    ``` <ol>
+    ```
+    <ol>
     ```
 
     - Unordered lists
-    ```<ul>
+    ```
+    <ul>
     ```
 
     - Definition lists
