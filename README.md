@@ -22,3 +22,6 @@ This page contains main topics I have read and learned about front_end works.
 
 2. Day 2
     - [Html and JS](https://github.com/jasonliu5322/Reading_Learning_Notes/blob/master/201/day2.md)
+
+3. Day 3
+    - [Html, CSS and JS](https://github.com/jasonliu5322/Reading_Learning_Notes/blob/master/201/day3.md)
