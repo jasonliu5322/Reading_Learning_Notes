@@ -1,7 +1,11 @@
 # Day 3
 - Chapter 3: "List" p62-73
     - Ordered lists
+<<<<<<< HEAD
     ``` 
+=======
+    ```
+>>>>>>> f3bb6c873c90c4f18502e55f2715bcad7b7c0d90
     <ol>
     ```
 
@@ -30,6 +34,7 @@
         
         - margin: The margin property controls the gap between boxes. Its value is commonly given in pixels, If one box sits on top of another, margins are collapsed , which means the larger of the two margins will be used and the smaller will be disregarded.
         
+<<<<<<< HEAD
      - centering content
        In order to center a box on the page, you need to set a width for the box (otherwise it will take up the full width of the page). Once you have specified the width of the box, setting the left and right margins to auto will make the browser put an equal gap on each side of the box. 
 
@@ -69,4 +74,3 @@
       - while loop
       - do-while loop
       
-       
